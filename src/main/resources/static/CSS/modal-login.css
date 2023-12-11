@@ -1,0 +1,178 @@
+#open-modal-login {
+	display: none;
+}
+
+
+#open-modal-login:checked+#modal-login {
+	display: flex;
+}
+
+#open-modal-login:not(:checked)+#modal-login {
+	display: none;
+}
+
+#modal-login {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+
+.div-login {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 500px;
+	background-color: whitesmoke;
+	border-radius: 25px;
+	border: 1px solid black;
+	box-shadow: 0px 0px 50px 3px black;
+
+}
+
+.div-login-header {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 60px;
+	justify-content: center;
+	align-items: center;
+	background-color: whitesmoke;
+	border-radius: 25px 25px 0px 0px;
+	border-bottom: 1px solid black;
+}
+
+.div-button-close {
+	position: absolute;
+	right: 5px;
+	width: 60px;
+	height: 60px;
+	background-image: url("/medias/PNG/fechar.png");
+	background-repeat: no-repeat;
+	background-size: 32%;
+	background-position: center;
+	transition-property: all;
+	transition-duration: 500ms;
+}
+
+.div-button-close:hover {
+	background-size: 28%;
+
+}
+
+.div-login-header>p {
+	font-size: 28px;
+}
+
+.div-login-main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	padding-top: 10px;
+	border-radius: 0px 0px 25px 25px;
+}
+
+.img-icon-memedroid-logo {
+	width: 75px;
+	height: fit-content;
+}
+
+.dialog-box {
+	display: flex;
+	width: 85%;
+	height: 40px;
+	margin: 10px 0px;
+	align-items: center;
+	justify-content: center;
+	background-color: ghostwhite;
+	border-radius: 10px;
+}
+.dialog-box p {
+	text-align: center;
+}
+
+.div-inputs {
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	height: 200px;
+	align-items: center;
+}
+
+.div-input {
+	display: flex;
+	width: 95%;
+	height: 50px;
+	margin: 10px 0px;
+	padding: 0px 5px;
+	align-items: center;
+	background-color: white;
+	border: 1px solid black;
+	box-shadow: 0px 0px 5px 1px black;
+	border-radius: 15px;
+
+}
+
+.div-input>img {
+	width: fit-content;
+	height: 70%;
+	margin-right: 5px;
+
+}
+
+.div-input>input {
+	width: 80%;
+	height: 65%;
+	padding-left: 5px;
+	border-bottom: 2px solid black;
+	font-size: 18px;
+	outline: none;
+}
+
+.button-login {
+	margin-top: 10px;
+	width: 70%;
+	height: 40px;
+	border-radius: 10px;
+	border: 1px solid black;
+	box-shadow: 0px 0px 5px 1px black;
+	transition-duration: 500ms;
+
+}
+
+.button-login:hover {
+	transform: scale(1.02);
+}
+
+.div-contacts {
+	display: flex;
+	width: 95%;
+	height: 80px;
+	align-items: center;
+	justify-self: center;
+}
+
+.div-contacts>a {
+	font-size: 20px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+	.div-login {
+		width: 350px;
+	}
+
+	.div-input>img {
+		width: fit-content;
+		height: 70%;
+		width: 35px;
+		margin-right: 5px;
+
+	}
+}
+

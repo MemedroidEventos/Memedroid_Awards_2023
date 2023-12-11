@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="CSS/winPage.css">
+	<link rel="icon" href="medias/Memedroid_icon.webp">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vencedor</title>
+</head>
+	<main>
+		
+		<div class="winner">
+			<img class="img-banner-winner" src="./medias/PNG/winner.png">
+			<img class="img-user-winner" th:src="@{'https://appv2.memedroid.com/user_profile/get_user_avatar?username='+${userWinner}+'&thumb=1'}">
+			<img class="img-medal-winner" src="./medias/PNG/medalha.png">
+			<img class="img-red-winner" src="./medias/PNG/red.png">
+			<p class="text-user-winner" th:text="${userWinner}" ></p>
+		</div>
+		
+		<div class="container">
+			
+			<div class="title">
+				<h1>Estatísticas</h1>
+
+			</div>
+			
+			<details >
+				<summary>
+					Final
+				</summary>
+				<div class="container-details">
+					<table>
+						
+						<tr>
+							<th>Nick</th>	
+							<th>Votos recebidos</th>
+						</tr>
+						
+						<tr th:each="user : ${final}">
+							<td th:text="${user.nick}"></td>
+							<td th:text="${user.roundFinalVoted}"></td>
+						</tr>
+
+					</table>
+				</div>
+
+			</details>
+
+			<details >
+				<summary>
+					Semi final
+				</summary>
+				<div class="container-details">
+					<table>
+						<tr>
+							<th>Nick</th>	
+							<th>Votos recebidos</th>
+						</tr>
+						
+						<tr th:each="user : ${round_4}">
+							<td th:text="${user.nick}"></td>
+							<td th:text="${user.roundOf4Voted}"></td>
+						</tr>
+
+					</table>
+				</div>
+			</details>
+			
+			<details>
+				<summary>
+					Quartas de final
+				</summary>
+				<div class="container-details">
+					<table>
+						<tr>
+							<th>Nick</th>	
+							<th>Votos recebidos</th>
+						</tr>
+						
+						<tr th:each="user : ${round_8}">
+							<td th:text="${user.nick}"></td>
+							<td th:text="${user.roundOf8Voted}"></td>
+						</tr>
+
+					</table>
+				</div>
+			</details>
+			
+			<details>
+				<summary>
+					Classificatórias
+				</summary>
+				<div class="container-details">
+					<table>
+						<tr>
+							<th>Nick</th>	
+							<th>Votos recebidos</th>
+						</tr>
+						
+						<tr th:each="user : ${classification}">
+							<td th:text="${user.nick}"></td>
+							<td th:text="${user.classificationVoted}"></td>
+						</tr>
+
+					</table>
+				</div>
+			</details>
+			
+			<details open>
+				<summary>
+					Agradicmentos especiais
+				</summary>
+				<div class="thanks">
+					<p>Gostária de deixar aqui os meus agradecimentos a todos que ajudaram nesse projeto. É graça a vocês
+						que foi possível realizar esse evento, e por isso vocês tem  o meu total respeito e carinho. 
+					</p>    
+					<p class="names"><b>Minhas gratidões para</b></p>    
+					
+					<div class="list-collaborators">
+						
+						<div class="collaborator">
+							<img loading="lazy" src="https://appv2.memedroid.com/user_profile/get_user_avatar?username=Ttlegend19&thumb=1">
+							<div class="collaborator-p">
+								<p>Ttlegend19</p>
+							</div>
+						</div>
+						
+						<div class="collaborator">
+							<img loading="lazy" src="https://appv2.memedroid.com/user_profile/get_user_avatar?username=Ibosta&thumb=1">
+							<div class="collaborator-p">
+								<p>Ibosta</p>
+							</div>
+						</div>
+						
+						<div class="collaborator">
+							<img loading="lazy" src="https://appv2.memedroid.com/user_profile/get_user_avatar?username=GIGAN&thumb=1">
+							<div class="collaborator-p">
+								<p>GIGAN</p>
+							</div>
+						</div>
+						
+						<div class="collaborator">
+							<img loading="lazy" src="https://appv2.memedroid.com/user_profile/get_user_avatar?username=Rayhato&thumb=1">
+							<div class="collaborator-p">
+								<p>Rayhato</p>
+							</div>
+						</div>						
+						
+						<div class="collaborator">
+							<img loading="lazy" src="https://appv2.memedroid.com/user_profile/get_user_avatar?username=Cafezinhohmmmm&thumb=1">
+							<div class="collaborator-p">
+								<p>Cafezinhohmmmm</p>
+							</div>
+						</div>
+						
+						<div class="collaborator">
+							<img loading="lazy" src="https://appv2.memedroid.com/user_profile/get_user_avatar?username=Ednaldoagiota&thumb=1">
+							<div class="collaborator-p">
+								<p>Ednaldoagiota</p>
+							</div>
+						</div>
+						
+						<div class="collaborator">
+							<img loading="lazy" src="https://appv2.memedroid.com/user_profile/get_user_avatar?username=CicloneAlpha&thumb=1">
+							<div class="collaborator-p">
+								<p>CicloneAlpha</p>
+							</div>
+						</div>
+						
+						<div class="collaborator">
+							<img loading="lazy" src="https://appv2.memedroid.com/user_profile/get_user_avatar?username=Toshiba_somaliese&thumb=1">
+							<div class="collaborator-p">
+								<p>Toshiba_somaliese</p>
+							</div>
+						</div>
+						
+					</div>
+					<p>Deixo aqui também os meus agradecimentos a todos que participaram desse evento.</p>
+					<p class="signed">Assinado: denadaamigo</p>
+				</div>
+			</details>
+		
+		</div>
+		
+	</main>
+	
+</body>
+
+</html>

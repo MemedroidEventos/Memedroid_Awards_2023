@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404</title>
+    <style>
+	 	* {
+			 box-sizing: border-box;
+			 padding: 0;
+			 margin: 0;
+		 }
+		 h1 , h2, h3{
+			 text-align: center;
+			 margin: 10px auto;
+		 }
+		 h1 {
+			 font-size: calc(4.5vm + 10px);
+		 }
+		 h2 {
+			font-size: calc(4vm + 15px);
+
+		 }
+		 h3 {
+			
+			font-size: calc(3.5vm + 20px);
+
+		 }
+	</style>
+	<script defer>
+		time = 15
+		
+		setInterval(()=>{
+			document.getElementById('dynamic-text').innerText = `Redirecionamento automático iniciará em ${--time < 10 ? "0"+time: time} segundos`
+			if(time <= 0){
+				window.location.href = "/";
+			}
+			
+		},1000)
+	</script>
+</head>
+
+<body>
+
+	<div style="width: 100%; height: 940px; display: flex; flex-direction: column; align-items: center; background-image: url('medias/JPG/background.jpg');  background-position: center; background-size: cover;">
+		<img src="medias/PNG/404.png" style="width: 320px; height: fit-content; filter: drop-shadow(0px 0px 20px black);" >
+		<div style="display: flex; flex-direction: column; align-items: center;">
+			<h1>A página que você está tentando acessar não existe</h1>
+			<h2>Por favor vote para a página principal, não há nada aqui</h2>
+			<button style="width: 250px; height: 50px; border-radius: 5px; margin: 10px auto;">
+				<a style="display: flex; width: 100%; height: 100%; justify-content: center; align-items: center; font-size: 24px; color: black; text-decoration: none; cursor:  inherit; outline: none;" href="/">Voltar</a>
+			</button>
+			<h3 id="dynamic-text">Redirecionamento automático iniciará em 15 segundos</h3>
+		</div>
+	</div>
+</body>
+
+</html>

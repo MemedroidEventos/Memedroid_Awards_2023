@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Memedroid Awards</title>
+	<link rel="icon" href="medias/Memedroid_icon.webp">
+	<link rel="stylesheet" href="CSS/index.css">
+	<link rel="stylesheet" href="CSS/modal-login.css">
+	<link rel="stylesheet" href="CSS/style.css">
+	<script type="module" src="../JAVASCRIPT/index.js" defer></script>
+	<script type="module" src="../JAVASCRIPT/modal-login.js" defer></script>
+
+</head>
+
+<body>
+
+	<div th:replace="~{components/modal}"></div>
+
+    <div th:replace="~{components/header :: header}"></div>
+    
+    <div th:replace="~{components/div-voted}"></div>
+
+	<main>
+
+		<div class="scoreboard">
+			<h1>User classificados para o mata-mata: </h1>
+			<input type="checkbox" id="expand-TopUsers">
+			<div class="TopUsers">
+				<div class="TopUser" th:each="topUser : ${UsersClassifications}">
+					<div class="TopUser-img">
+						<img th:src="@{'https://appv2.memedroid.com/user_profile/get_user_avatar?username='+${topUser}+'&thumb=1'}">
+					</div>
+					<div class="TopUser-text">
+						<p th:text="${topUser}"></p>
+					</div>
+				</div>
+			</div>
+				
+			<label class="div-expand-TopUsers-click" for="expand-TopUsers">
+				<img src="medias/PNG/set.png">
+			</label>
+		</div>
+
+		<div class="UserVote">
+			<div class="outdoor">
+				<h2>Pesquise pelo nome dos seus usuários favoritos e clique em "votar". Cada usuário pode votar em até 3
+					diferente </h2>
+			</div>
+			<div class="nav-bar">
+				<div class="search">
+					<input placeholder="Pesquise por um user">
+				</div>
+
+			</div>
+			<div class="Users">
+				
+				<div class="User" th:each="user : ${users}">
+					<div class="PhotoOfPerfil">
+						<img th:src="@{'https://appv2.memedroid.com/user_profile/get_user_avatar?username='+${user}+'&thumb=1'}"
+							loading="lazy"
+							onerror="this.src='medias/JPG/dafult.jpg'">
+					</div>
+					<div class="infromationOfUser">
+						<div class="NickName">
+							<p th:text="${user}"></p>
+						</div>
+						<div class="Buttons">
+							<button class="VotedPerfil" th:data-username="${user}">Votar</button>
+							<button class="ViewPerfil" >
+								<a th:href="@{'https://pt.memedroid.com/user/view/' + ${user}}" target="_blank">Ver perfil</a>
+							</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+	</main>
+
+	<div th:replace="~{components/footer :: footer} " ></div>
+
+</body>
+
+</html>

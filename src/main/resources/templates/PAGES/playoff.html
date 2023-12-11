@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Memedroid Awards mata mata</title>
+	<link rel="icon" href="medias/Memedroid_icon.webp">
+	<link rel="stylesheet" href="CSS/playoff.css">
+	<link rel="stylesheet" href="CSS/style.css">		
+	<script type="module" src="../JAVASCRIPT/playoff.js" defer></script>
+
+</head>
+
+<body>
+
+	<div th:replace="~{components/modal}"></div>
+
+    <div th:replace="~{components/header :: header}"></div>
+
+	<div th:replace="~{components/div-voted}"></div>
+
+	<main>
+		<h1>Mata mata</h1>
+		<div class="div-vote" th:each="user : ${userPlayOff}">
+	
+			<div class="div-user-1" >
+				<div class="div-photo" >
+					<img th:src="@{'https://appv2.memedroid.com/user_profile/get_user_avatar?username='+${user[0]}+'&thumb=1'}">
+				</div>
+				<div class="div-nick">
+					<p th:text="${user[0]}" ></p>
+				</div>
+				<div class="div-button">
+					<button th:data-username="${user[0]}">Votar</button>
+				</div>
+			</div>
+				
+			<div class="div-user-2" >
+				<div class="div-photo">
+					<img th:src="@{'https://appv2.memedroid.com/user_profile/get_user_avatar?username='+${user[1]}+'&thumb=1'}">
+				</div>
+				<div class="div-nick">
+					<p th:text="${user[1]}"></p>					
+				</div>
+				<div class="div-button">
+					<button th:data-username="${user[1]}">Votar</button>
+				</div>
+			</div>
+			<div class="red"></div>
+
+	</div>
+				
+	</main>
+
+
+	<div th:replace="~{components/footer :: footer}" ></div>
+
+</body>
+
+</html>

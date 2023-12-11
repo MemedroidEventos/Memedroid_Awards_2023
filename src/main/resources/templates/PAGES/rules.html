@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="medias/Memedroid_icon.webp">
+	<link rel="stylesheet" href="../CSS/modal-login.css">
+	<link rel="stylesheet" href="../CSS/style.css">
+	<link rel="stylesheet" href="../CSS/rules.css">
+	<script type="module" src="../JS/rules.js" defer></script>
+	<title>regra do memedroid award</title>
+
+</head>
+
+<body>
+
+	<div th:replace="~{components/modal}"> </div>
+	<div th:replace="~{components/header :: header}"> </div>
+
+	<main>
+		<div class="title">
+			<h1>Regras e explicação do Memedroid Awards</h1>
+		</div>
+		
+		<details close>
+			<summary>
+				<h1>Quem pode participar ? </h1>
+				<div class="button-open">
+					<img src="./medias/PNG/img-button.png">
+				</div>
+			</summary>
+			<div class="content">
+				<ul>
+					<li>
+						<p>Poderão participar todo aquele usuário <b>ativo</b> com mais do que 100 mil de score.</p>
+					</li>
+					<li>
+						<p>Aqueles que não tiverem o score necessário poderão participar caso  
+						seja notária sua presença na comunidade. </p>
+					</li>
+				</ul>
+			</div>
+		</details>
+		
+		<details close>
+			<summary>
+				<h1>Como funcionará ?</h1>
+				<div class="button-open">
+					<img src="./medias/PNG/img-button.png">
+				</div>
+			</summary>
+			<div class="content">
+				<ul>
+					<li>
+						<h2>Votação geral</h2>
+						<ul>
+							<li>
+								<p>Na votação geral todos os participantes estarão competido entre si para irem para o mata-mata.</p>
+							</li>
+							<li>
+								<p>Cada participante terá 3 votos não podendo usar mais de um voto no mesmo usuário.</p>
+							</li>	
+							<li>
+								<p>Serão selecionados para o mata-mata os 8 usuários que mais receberem votos.</p>
+							</li>
+							<li>
+								<p>Em caso de empate o critério para o desempate será quem tiver o maior score no perfil do Memedroid.</p>
+							</li>						
+						</ul>
+					</li>
+					<li>
+						<h2>Mata-mata</h2>
+						<ul>
+							<li>
+								<p>Os usuários selecionados da votação geral disputarão eleições entre si e o perdedor é eliminado e o 
+									 vecendor irá para a próxima fase.</p>
+							</li>
+							<li>
+								<p>Ao todo serão 3 fases: quartas de final, semi-final e final.</p>
+							</li>
+							<li class="li-tabela">
+								<p>As disputas serão feita de tal meneira em que os selecionados da votação geral que ficaram mais acima, disputarão
+									primeiramente com aqueles que ficaram mais abaixo. Portanto o primeiro colocado disputará com o oitvo, o sétimo
+									com o segundo e assim por diante. A imagem abaixo ilustra como funcionará:
+								</p>
+								<img src="medias/PNG/tabela-modelo-mata-mataa.png">
+							</li>
+							<li>
+								<p>Vence a disputa o usuário que tiver mais voto.</p>
+							</li>
+							<li>
+								<p>Em caso de empate o critério para o desempate será quem tiver o maior score no perfil do Memedroid.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</details>
+		<details id="div-with-video">
+			<summary>
+				<h1>O que ganha o vencedor ?</h1>
+				<div class="button-open">
+					<img src="./medias/PNG/img-button.png">
+				</div>
+			</summary>
+			<div class="div-video">
+				<iframe id="Okay" width="600px" height="340px" src="https://www.youtube.com/embed/a6adHG7uoQE?si=qL1hkQSoayPs9mk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			
+		</details>
+
+	</main>
+
+	<div th:replace="~{components/footer :: footer}"> </div>
+
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+}
+
+header {
+	display: grid;
+	width: 100%;
+	height: 100px;
+	background-color: #73A605;
+	grid-template-columns: 10% 80% 10%;
+	padding: 5px;
+
+}
+
+.gridLeft {
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+
+}
+
+.gridLeft>label {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+
+.gridLeft>label>img {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	border: 1px solid black;
+	transition-property: all;
+	transition-duration: 500ms;
+	box-shadow: 0px 0px 5px 1px black;
+
+}
+
+.gridLeft>label>img:is(:hover, :focus) {
+	transform: scale(1.15);
+}
+
+
+.gridCenter {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.gridRight {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	padding-right: 20px;
+}
+
+.gridRight>a {
+	font-size: 24px;
+	text-decoration: none;
+	color: inherit;
+
+}
+
+footer p {
+  font-family: Roboto;
+}
+
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+.footer-right a {
+	background-position: center;
+	background-size: contain;
+}
+.footer-right a:nth-child(1){
+	background-image: url('https://appv2.memedroid.com/user_profile/get_user_avatar?username=Ttlegend19&thumb=1');
+
+}
+
+.footer-right a:nth-child(2){
+	background-image: url('https://appv2.memedroid.com/user_profile/get_user_avatar?username=denadaamigo&thumb=1');
+
+}
+.footer-right a:nth-child(3){
+	background-image: url('https://pt.memedroid.com/favicon.ico');
+
+}
+
+@media only screen and (max-width: 320px) {
+
+	header {
+		height: 50px;
+	}
+
+	.gridLeft {
+		padding-left: 5px;
+	}
+
+	.gridRight {
+		padding-right: 5px;
+	}
+
+	.gridLeft>img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.gridCenter>img {
+		width: 200px;
+	}
+
+	.gridRight>a {
+		font-size: 16px;
+	}
+
+	#perfil-photo {
+		width: 30px;
+		height: 30px;
+	}
+
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+	header {
+		height: 60px;
+	}
+
+	.gridLeft {
+		padding-left: 5px;
+	}
+
+	.gridRight {
+		padding-right: 5px;
+	}
+
+	.gridLeft>img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.gridCenter>img {
+		width: 250px;
+	}
+
+	.gridRight>a {
+		font-size: 16px;
+	}
+
+	#perfil-photo {
+		width: 32px;
+		height: 32px;
+	}
+
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	header {
+		width: 100%;
+		height: 80px;
+	}
+
+	.gridLeft {
+		padding-left: 5px;
+	}
+
+	.gridRight {
+		padding-right: 5px;
+	}
+
+	.gridLeft>img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.gridCenter>img {
+		width: 250px;
+	}
+
+	.gridRight>a {
+		font-size: 22px;
+	}
+
+	.gridCenter>img {
+		width: 300px;
+		height: fit-content;
+	}
+
+	#perfil-photo {
+		width: 45px;
+		height: 45px;
+	}
+
+}
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+
+/* Color Theme Swatches in Hex */
+.Corners-with-green-leaves-1-hex {
+	color: #3B7302;
+}
+
+.Corners-with-green-leaves-2-hex {
+	color: #2E5902;
+}
+
+.Corners-with-green-leaves-3-hex {
+	color: #73A605;
+}
+
+.Corners-with-green-leaves-4-hex {
+	color: #A5BF6B;
+}
+
+.Corners-with-green-leaves-5-hex {
+	color: #F2F2F2;
+}
+
+/* Color Theme Swatches in RGBA */
+.Corners-with-green-leaves-1-rgba {
+	color: rgba(58, 114, 2, 1);
+}
+
+.Corners-with-green-leaves-2-rgba {
+	color: rgba(45, 89, 1, 1);
+}
+
+.Corners-with-green-leaves-3-rgba {
+	color: rgba(114, 165, 4, 1);
+}
+
+.Corners-with-green-leaves-4-rgba {
+	color: rgba(164, 191, 107, 1);
+}
+
+.Corners-with-green-leaves-5-rgba {
+	color: rgba(242, 242, 242, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.Corners-with-green-leaves-1-hsla {
+	color: hsla(90, 96, 22, 1);
+}
+
+.Corners-with-green-leaves-2-hsla {
+	color: hsla(90, 96, 17, 1);
+}
+
+.Corners-with-green-leaves-3-hsla {
+	color: hsla(78, 94, 33, 1);
+}
+
+.Corners-with-green-leaves-4-hsla {
+	color: hsla(78, 39, 58, 1);
+}
+
+.Corners-with-green-leaves-5-hsla {
+	color: hsla(0, 0, 95, 1);
+}
